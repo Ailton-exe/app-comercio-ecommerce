@@ -8,27 +8,27 @@ import FormCheckbox from "./FormCheckbox";
 
 const Filters = () => {
   const [selectCategoryList, setSelectCategoryList] = useState([
-    "all",
-    "shoes",
-    "slippers",
-    "heels",
-    "t-shirts",
-    "jackets",
-    "caps",
-    "shorts",
-    "sweaters",
-    "sneakers",
-    "shirts",
-    "boots",
-    "overshirts",
-    "pants",
-    "jeans",
-    "socks",
-    "belts",
-    "trainers",
+"Todos",
+"zapatos",
+"pantuflas",
+"tacones",
+"camisetas",
+"chaquetas",
+"gorras",
+"pantalones cortos",
+"suéteres",
+"zapatillas deportivas",
+"camisas",
+"botas",
+"camisas exteriores",
+"pantalones",
+"jeans",
+"calcetines",
+"cinturones",
+"zapatillas de entrenamiento",
   ]);
   const [selectBrandList, setSelectBrandList] = useState([
-    "all",
+    "Todos",
     "WALK LONDON",
     "Reebok",
     "Nike",
@@ -69,14 +69,14 @@ const Filters = () => {
       {/* SEARCH */}
       <FormInput
         type="search"
-        label="search product"
+        label="Buscar"
         name="search"
         size="input-sm"
-        defaultValue=""
+        defaultValue="Buscar..."
       />
       {/* CATEGORIES */}
       <FormSelect
-        label="select category"
+        label="Categoría"
         name="category"
         list={selectCategoryList}
         size="select-sm"
@@ -84,7 +84,7 @@ const Filters = () => {
       />
       {/* COMPANIES */}
       <FormSelect
-        label="select brand"
+        label="Marca"
         name="brand"
         list={selectBrandList}
         size="select-sm"
@@ -92,24 +92,24 @@ const Filters = () => {
       />
       {/* ORDER */}
       <FormSelect
-        label="sort by"
+        label="Ordenar por"
         name="order"
-        list={["asc", "desc", "price high", "price low"]}
+        list={["Ascendiente", "Descendente", "Más caro primero", "Más barato primero"]}
         size="select-sm"
         defaultValue="a-z"
       />
       {/* Producer */}
       <FormSelect
-        label="Select gender"
+        label="Selecciona genero"
         name="gender"
-        list={["all", "male", "female"]}
+        list={["Todos", "Masculino", "Femenino"]}
         size="select-sm"
         defaultValue="all"
       />
       {/* PRICE */}
       <FormRange
         name="price"
-        label="select price"
+        label="Selecciona el precio"
         size="range-sm"
         price={2000}
       />
@@ -118,7 +118,7 @@ const Filters = () => {
 
       {/* In stock */}
       <FormCheckbox
-        label="Only products in stock"
+        label="Productos con stock"
         name="stock"
         defaultValue="false"
       />
@@ -129,10 +129,10 @@ const Filters = () => {
         type="submit"
         className="btn bg-blue-600 hover:bg-blue-500 text-white btn-sm"
       >
-        search
+        BUSCAR
       </button>
       <Link to="/shop?page=1" className="btn btn-primary btn-sm">
-        reset
+        RESETEAR
       </Link>
     </Form>
   );

@@ -253,7 +253,7 @@ const Header = () => {
           <NavLink className="text-accent-content" to="/">
             Inicio 
           </NavLink>
-          <NavLink className="text-accent-content" to="/">
+          <NavLink className="text-accent-content" to="/shop">
             Catálogo
           </NavLink>
           <NavLink className="text-accent-content" to="/">
